@@ -1,16 +1,16 @@
 interface UserProps {
-    name?:string;
-    age?:number;
+  name?: string;
+  age?: number;
 }
 
 export class User {
-    constructor(private data:UserProps){}
+  constructor(private data: UserProps) {}
 
-    get(propName:string) : string | number{
-        return this.data[propName]
-    }
+  get(propName: string): string | number {
+    return this.data[propName];
+  }
 
-    set(update:UserProps):void {
-        Object.assign(this.data,update)
-    }
+  set(update: UserProps): void {
+    Object.assign(this.data, update);
+  }
 }
